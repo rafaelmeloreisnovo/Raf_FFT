@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"urn:rafaelia:capability-request:s0",
+  "title":"RAFAELIA Capability Request S0 (offline preflight only)",
+  "type":"object","additionalProperties":false,
+  "required":["schema","request_id","origin","mode","operation","subject_present","consent","target","privacy_class","write_requested","dry_run","source_ref","claim_allowed"],
+  "properties":{
+    "schema":{"const":"rafaelia.capability-request.s0"},
+    "request_id":{"type":"string","pattern":"^[A-Z0-9][A-Z0-9_-]{7,79}$"},
+    "origin":{"enum":["GPT_UI","APK_UI"]},
+    "mode":{"enum":["LOCAL_SYNTHETIC","GITHUB_PUBLIC_METADATA","DRIVE_SAF_LOCAL_PREVIEW"]},
+    "operation":{"enum":["FFT_Q16_TEST","FETCH_PUBLIC_METADATA_PREVIEW","LIST_SELECTED_URI_PREVIEW"]},
+    "subject_present":{"type":"boolean"},
+    "consent":{"enum":["EXPLICIT_LOCAL_UI","NONE"]},
+    "target":{"type":"string","minLength":1,"maxLength":220},
+    "privacy_class":{"enum":["SYNTHETIC","PUBLIC","PRIVATE_METADATA","PRIVATE_CONTENT","UNKNOWN"]},
+    "write_requested":{"type":"boolean"},
+    "dry_run":{"type":"boolean"},
+    "source_ref":{"type":"string","minLength":1,"maxLength":220},
+    "claim_allowed":{"const":false}
+  }
+}
