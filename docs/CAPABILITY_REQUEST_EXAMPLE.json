@@ -1,0 +1,15 @@
+{
+  "schema": "rafaelia.capability-request.s0",
+  "request_id": "RAFAELIA-S0-001",
+  "origin": "APK_UI",
+  "mode": "LOCAL_SYNTHETIC",
+  "operation": "FFT_Q16_TEST",
+  "subject_present": true,
+  "consent": "EXPLICIT_LOCAL_UI",
+  "target": "fixture:fft8-q16",
+  "privacy_class": "SYNTHETIC",
+  "write_requested": false,
+  "dry_run": true,
+  "source_ref": "synthetic:fft8-q16",
+  "claim_allowed": false
+}
